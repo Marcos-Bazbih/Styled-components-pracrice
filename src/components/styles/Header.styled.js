@@ -2,15 +2,10 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
     grid-area: header;
-    background: ${({ theme }) => theme.colors.header};
+    color: ${({ mode }) => mode.color};
+    background: ${({ mode }) => mode.background};
     display:flex;
     justify-content:center;
     align-items:center;
-    transition: 0.5s ease-in-out;
-    h1{
-        color:white;
-    }
-    &:hover{
-        background: blue;
-    }
+    border: 2px solid ${({ mode }) => mode.color};
 `
